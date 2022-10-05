@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+ let search = location.search;
+ if(search){
+  if(search.startsWith('?')){
+  search = search.slice(1);
+  const s = search.split('&').find(s=>s.startsWith('page'));
+  if(s){
+    const page = s.split('=')[1];
+    document.write(decodeURIComponent(page));
+  }
+  }
+ }
+
+</script>
+
+
+</head>
+<body></body>
+</html>
